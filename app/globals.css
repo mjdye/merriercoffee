@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/* Brand palette, taken from the menu board, socials card and the cart itself. */
+@theme {
+  --color-cream: #fbf8f1;
+  --color-cream-dark: #f1ebdd;
+  --color-charcoal: #2b2b2b;
+  --color-ink-soft: #5a554e;
+  --color-rust: #a4492a;
+  --color-rust-dark: #8a3b20;
+  --color-wood: #6b3f24;
+  --color-espresso: #3a2418;
+
+  --font-sans: var(--font-lato), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-source-serif), ui-serif, Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Keeps anchor targets clear of the sticky header. */
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-charcoal);
+}
+
+/* Wide-tracked caps, like "COFFEE" in the logo lockup. */
+@utility eyebrow {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+@utility heading {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
